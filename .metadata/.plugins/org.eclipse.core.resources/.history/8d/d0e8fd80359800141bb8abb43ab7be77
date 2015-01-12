@@ -1,0 +1,29 @@
+package com.steventhanna.OCR;
+import java.awt.Graphics;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+import javax.imageio.ImageIO;
+
+
+public class ImageManipulation {
+
+	// Load image
+	public void loadImage(String filename) {
+		BufferedImage img = null;
+		try {
+			img = ImageIO.read(new File(filename));
+		} catch(IOException e) {
+			System.out.println("There was an error: " + e);
+		}
+	}
+
+	// Convert image to greyscale
+	public void imageGreyScale(int width, int height, String file) {
+		BufferedImage image = new BufferedImage(width, height, BufferedImage.TYPE_BYTE_GRAY);
+		Graphics g = image.getGraphics();
+		g.drawImage(colorImage, 0, 0, null);
+		g.dispose();
+	}
+
+}

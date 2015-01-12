@@ -1,4 +1,4 @@
-package steventhanna.OCR;
+package com.steventhanna.OCR;
 
 public class Recognition {
 
